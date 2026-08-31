@@ -36,7 +36,7 @@ st.markdown("""
             </style>
             """, unsafe_allow_html=True)
 
-API_URL = "http://127.0.0.1:8001"
+API_URL = "https://churn-5i6f.onrender.com"
 
 st.title("📉 TelcoNova Customer Churn Prediction System")
 
