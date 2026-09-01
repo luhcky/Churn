@@ -41,7 +41,7 @@ st.markdown("""
             </style>
             """, unsafe_allow_html=True)
 
-API_URL = "http://127.0.0.1:8004"
+API_URL = "https://churn-1-racq.onrender.com"
 
 COUNTIES = sorted([
     "Uasin Gishu","Trans Nzoia","Nakuru","Nandi","Kericho","Bomet",
@@ -79,7 +79,6 @@ try:
 except Exception:
     st.error(
         "⚠ API not running. Start it:\n"
-        "`uvicorn api.main:app --reload --port 8004`"
     )
     st.stop()
 
