@@ -24,12 +24,7 @@ page_bg ="""
         </style>
         """
 st.set_page_config(page_title='Fraud Detector', page_icon='💳', layout='wide')
-@st.cache_resource
-def load_artifacts():
-    return (joblib.load('models/fraud_model.pkl'),
-            joblib.load('models/fraud_scaler.pkl'),
-            joblib.load('models/fraud_feature_names.pkl'))
-model, scaler, feature_names = load_artifacts()
+APP URL = "https://fraud-detector-zgo6.onrender.com"
 st.title('💳SecurePay — Fraud Detection System')
 st.markdown('Real-time transaction fraud scoring.')
 st.divider()
