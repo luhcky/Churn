@@ -4,7 +4,7 @@
 An end-to-end machine learning system that predicts which employees are at
 risk of resigning, so HR teams can act before losing valuable talent. The
 project spans data analysis, SQL, Excel, Power BI, a full ML pipeline with
-explainability, and a production-style deployment (Streamlit + Docker).
+explainability, and a production-style deployment
 
 ## Business Problem
 Employee attrition is costly — recruiting, onboarding, and lost productivity
@@ -14,7 +14,7 @@ explanations so HR knows *why* an employee is at risk and what to do about it.
 
 ## Dataset
 IBM HR Analytics Employee Attrition Dataset (1,470 employees, 35 columns).
-Place the CSV at `data/raw/WA_Fn-UseC_-HR-Employee-Attrition.csv`.
+
 
 ## Tech Stack
 | Layer | Tools |
