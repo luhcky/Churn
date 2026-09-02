@@ -17,6 +17,7 @@ MODEL_DIR = os.path.join(BASE_DIR,"models")
 
 model = joblib.load(f'{MODEL_DIR}/attrition_pipe.pkl')
 FEATURES = joblib.load(f'{MODEL_DIR}/feature_names.pkl')
+THRESHOLD = 0.5
 try:
     import shap
     model = model.named_steps['xgb']
@@ -215,8 +216,7 @@ def predict(employee: EmployeeInput):
     start = time.time()
     try:
         X = build_features(employee)
-        X_s = scaler.transform(X)
-        prob = float(model.predict_proba(X_s)[0][1])
+        prob = float(model.predict_proba(X)[0][1])
         tier = get_risk_tier(prob)
         return{
             "attrition_probability" : round(prob, 4),
@@ -243,10 +243,9 @@ def predict_explain(employee: EmployeeInput):
     start = time.time()
     try:
         X = build_features(employee)
-        X_s = scaler.transform(X)
-        X_df =pd.DataFrame(X_s, columns=FEATURES)
+        X_df =pd.DataFrame(X, columns=FEATURES)
         
-        prob = float(model.predict_proba(X_s)[0][1])
+        prob = float(model.predict_proba(X)[0][1])
         tier = get_risk_tier(prob)
         
         shap_vals = EXPLAINER.shap_values(X_df)
