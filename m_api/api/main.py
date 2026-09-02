@@ -54,7 +54,7 @@ KENYA_COUNTIES = [
     "Migori","Nyamira","Kericho","Bomet","Nandi","Trans Nzoia","West Pokot",
     "Elgeyo Marakwet","Baringo","Laikipia","Samburu","Tharaka Nithi","Embu",
     "Kirinyaga","Murang'a","Kiambu","Nyandarua","Nyeri","Vihiga","Bungoma",
-    "Busia","Kitui","Makueni","Kajiado","Narok","Kisii","Eldoret",
+    "Busia","Kitui","Makueni","Kajiado","Narok","Kisii",
 ]
 
 CHANNELS = ("PESA", "AGENT", "TILL", "PAYBILL")
