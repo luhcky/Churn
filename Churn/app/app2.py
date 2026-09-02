@@ -50,7 +50,6 @@ try:
 except Exception:
     st.error(
         "⚠ API not running. Start it first:\n"
-        "`uvicorn api.main:app --reload --port 8001`"
     )
     st.stop()
 
